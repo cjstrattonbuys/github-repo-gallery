@@ -83,11 +83,11 @@ const displayRepoInfo = function (repoInfo, languages) {
     repoData.innerHTML = "";
     const repoDiv = document.createElement("div");
     repoDiv.innerHTML = `
-        <h3>Name: ${repoDiv.name}</h3>
-        <p>Description: ${repoDiv.description}</p>
-        <p>Default Branch: ${repoDiv.default_branch}</p>
+        <h3>Name: ${repoInfo.name}</h3>
+        <p>Description: ${repoInfo.description}</p>
+        <p>Default Branch: ${repoInfo.default_branch}</p>
         <p>Languages: ${languages.join(", ")}</p>
-        <a class="visit" href="${repoDiv.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
+        <a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
     `;
     repoData.append(repoDiv);
     repoData.classList.remove("hide");
